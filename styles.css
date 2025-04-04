@@ -10,7 +10,6 @@
 }
 
 *{
-    border: 1px solid black;
     box-sizing: border-box;
 }
 
@@ -18,6 +17,15 @@ body{
     height: 100vh;
     margin: 0;
     overflow: hidden;
+}
+
+.sky{
+    background: radial-gradient(
+        circle closest-corner at 15% 15%,
+        #ffcf33 0%,
+        #ffcf33 20%,
+        #ffff66 21%,
+        #bbeeff 100%);
 }
 
 .background-buildings, .foreground-buildings{
@@ -51,7 +59,9 @@ body{
 
 .bb1-window{
     height: 10%;
-    background: linear-gradient(var(--building-color1),var(--window-color1)); 
+    background: linear-gradient(
+        var(--building-color1),
+        var(--window-color1)); 
 }
 
 .bb1a{
@@ -69,7 +79,9 @@ body{
 .bb1d{
     width: 100%;
     height: 70%;   
-    background: linear-gradient(var(--building-color1) 50%,var(--window-color1));   
+    background: linear-gradient(
+        var(--building-color1) 50%,
+        var(--window-color1));   
 }
 
 .bb2{
@@ -86,13 +98,21 @@ body{
 .bb2b{
     width: 100%;
     height: 100%;
-    background: repeating-linear-gradient(var(--building-color2) 0%,var(--building-color2) 6%,var(--window-color2) 6%,var(--window-color2) 9%);
+    background: repeating-linear-gradient(
+        var(--building-color2) 0%,
+        var(--building-color2) 6%,
+        var(--window-color2) 6%,
+        var(--window-color2) 9%);
 }
 
 .bb3{
     width: 10%;
     height: 55%;
-    background: repeating-linear-gradient(90deg, var(--building-color3),var(--building-color3),var(--window-color3) 15%);
+    background: repeating-linear-gradient(
+        90deg, 
+        var(--building-color3),
+        var(--building-color3),
+        var(--window-color3) 15%);
 
 }
 
@@ -152,8 +172,17 @@ body{
 .fb1c{
     width: 100%;
     height: 80%;
-    background: repeating-linear-gradient(90deg, var(--building-color4) 0%,var(--building-color4) 10%, transparent 10%, transparent 15%),
-    repeating-linear-gradient(var(--building-color4) 0%, var(--building-color4) 10%, var(--window-color4) 10%, var(--window-color4) 90%);
+    background: repeating-linear-gradient(
+        90deg, 
+        var(--building-color4) 0%,
+        var(--building-color4) 10%, 
+        transparent 10%, 
+        transparent 15%),
+    repeating-linear-gradient(
+        var(--building-color4) 0%, 
+        var(--building-color4) 10%, 
+        var(--window-color4) 10%, 
+        var(--window-color4) 90%);
 }
 
 .fb2{
@@ -237,13 +266,51 @@ body{
     height: 33%;
     position: relative;
     right: 10%;
-    background: repeating-linear-gradient(var(--building-color2) 0%, var(--building-color2) 5%, transparent 5%, transparent 10%),
-    repeating-linear-gradient(90deg, var(--building-color2) 0%, var(--building-color2) 12%,var(--window-color2) 12%,var(--window-color2) 44%);
+    background: repeating-linear-gradient(
+        var(--building-color2) 0%, 
+        var(--building-color2) 5%, 
+        transparent 5%, 
+        transparent 10%),
+    repeating-linear-gradient(
+        90deg, var(--building-color2) 0%, 
+        var(--building-color2) 12%,
+        var(--window-color2) 12%,
+        var(--window-color2) 44%);
 }
 
 .fb6{
     width: 9%;
     height: 38%;
-    background: repeating-linear-gradient(90deg, var(--building-color3) 0%,var(--building-color3) 10%, transparent 10%, transparent 30%),
-    repeating-linear-gradient(var(--building-color3) 0%,var(--building-color3) 10%, var(--window-color3) 10%, var(--window-color3) 30%);
+    background: repeating-linear-gradient(
+        90deg, var(--building-color3) 0%,
+        var(--building-color3) 10%, 
+        transparent 10%, 
+        transparent 30%),
+    repeating-linear-gradient(
+        var(--building-color3) 0%,
+        var(--building-color3) 10%, 
+        var(--window-color3) 10%, 
+        var(--window-color3) 30%);
+}
+
+@media (max-width: 1000px){
+    :root{
+        --building-color1: #000;
+        --building-color2: #000;
+        --building-color3: #000;
+        --building-color4: #000;
+        --window-color1: #777;
+        --window-color2: #777;
+        --window-color3: #777;
+        --window-color4: #777;
+    }
+    
+    .sky{
+        background: radial-gradient(
+            circle closest-corner at 15% 15%,
+            #ccc 0%,
+            #ccc 20%,
+            #445 21%,
+            #223 100%);
+    }
 }
